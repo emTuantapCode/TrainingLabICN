@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Slideshow from "@/components/Slideshow";
+import Nav_bar from "@/components/Nav_bar";
+import Slide_show from "@/components/Slide_show";
 import Link from 'next/link';
-import Blogsection from '@/components/Blogsection';
+import Blog_section from '@/components/Blog_section';
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -11,17 +12,17 @@ export default function Home() {
     <main
       className={`flex  flex-col bg-white ${inter.className}`}
     >
-      <Navbar />
-      <Slideshow/>
-      <Link href="/" className="mt-20 text-gray-400 font-semibold hover:text-sky-500">
+      <Nav_bar />
+      <Slide_show/>
+      <Link href="/" className="link-default">
         CHI TIẾT HD
       </Link>
-      <div className="flex mt-10 justify-between items-center">
+      <div className="mt-10 flex justify-between items-center">
         <div className="/"></div>
-        <div className="text-align text-xl font-semibold text-sky-600 font-arial pl-48">
+        <div className="title pl-48">
           HOẠT ĐỘNG TIÊU BIỂU GẦN ĐÂY
         </div>
-        <Link href="/" className="mr-20 flex text-lg text-sky-500 items-center">
+        <Link href="/" className="mr-20 title-more">
           Xem thêm
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-blue-500 ml-1">
             <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" />
@@ -29,9 +30,9 @@ export default function Home() {
 
         </Link>
       </div>
-      <Blogsection />
+      <Blog_section />
       <div className="grid place-items-center">
-        <p className="mt-20 text-center text-xl font-semibold text-sky-600 font-arial">HOẠT ĐỘNG THEO CHỦ ĐỀ</p>
+        <p className="mt-20 title">HOẠT ĐỘNG THEO CHỦ ĐỀ</p>
       </div>
 
       <div className="flex items-center justify-between bg-white p-4">
@@ -51,7 +52,7 @@ export default function Home() {
 
         <span className="text-red-600 font-bold">Công ích - Xã hội</span>
       </div>
-      <Link href="/" className=" mr-16 flex text-lg text-sky-500 items-center">
+      <Link href="/" className=" mr-16 title-more">
           Xem thêm
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-blue-500 ml-1">
             <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" />
@@ -59,7 +60,7 @@ export default function Home() {
 
         </Link>
     </div>
-    <Blogsection />
+    <Blog_section />
     </main>
   );
 }

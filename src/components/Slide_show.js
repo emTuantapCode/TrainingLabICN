@@ -4,13 +4,13 @@ import React, { useState, useEffect } from 'react';
 //useEffect được dùng để thực hiện các hiệu ứng phụ (side effects) như thiết lập và dọn dẹp các interval.
 
 const slides = [
-  { id: 1, url: '/unsplash_nnJtKp37UOE.png' },
-  { id: 2, url: '/slideshow-1.jpg' },
-  { id: 3, url: '/slideshow-2.jpg' },
+  { id: 1, url: '/slide_image_1.png' },
+  { id: 2, url: '/slide_image_2.jpg' },
+  { id: 3, url: '/slide_image_3.jpg' },
 ];
 //Định nghĩa một mảng các đối tượng, mỗi đối tượng đại diện cho một slide với các thuộc tính id và url
 
-const Slideshow = () => {
+const Slide_show = () => {
 //Khởi tạo một functional component có tên là Slideshow
   const [currentSlide, setCurrentSlide] = useState(0);
   //Khai báo state currentSlide với giá trị khởi tạo là 0, đại diện cho chỉ số của slide hiện tại. 
@@ -48,13 +48,13 @@ const Slideshow = () => {
         className="absolute inset-0 flex items-center justify-between px-4"
       >
         <button
-          className="bg-gray-600 text-white p-2 rounded-full hover:bg-gray-700 active:bg-gray-700 "
+          className="slide-button "
           onClick={prevSlide}
         >
           &lt;
         </button>
         <button
-          className="bg-gray-600 text-white p-2 rounded-full hover:bg-gray-700 active:bg-gray-700 "
+          className="slide-button "
           onClick={nextSlide}
         >
           &gt;
@@ -80,4 +80,4 @@ const Slideshow = () => {
   );
 };
 
-export default Slideshow;
+export default Slide_show;
