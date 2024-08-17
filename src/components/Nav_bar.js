@@ -1,4 +1,4 @@
-// src/components/Navbar.js
+// src/components/Nav_bar.js
 import Link from 'next/link';
 import Image from 'next/image';
 

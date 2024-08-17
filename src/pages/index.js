@@ -4,7 +4,7 @@ import Nav_bar from "@/components/Nav_bar";
 import Slide_show from "@/components/Slide_show";
 import Link from 'next/link';
 import Blog_section from '@/components/Blog_section';
-
+import Section from '@/components/Section';
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -61,6 +61,7 @@ export default function Home() {
         </Link>
     </div>
     <Blog_section />
+    <Section />
     </main>
   );
 }

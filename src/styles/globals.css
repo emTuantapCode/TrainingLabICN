@@ -45,4 +45,8 @@ body {
   .slide-button{
     @apply bg-gray-600 text-white p-2 rounded-full hover:bg-gray-700 active:bg-gray-700;
   }
+  .section-bgr{
+    @apply bg-section-bgr flex w-full;
+    height:40rem;
+  }
 }
