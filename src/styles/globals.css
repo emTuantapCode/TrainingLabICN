@@ -30,4 +30,26 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .link-default {
+    @apply mt-20 text-link-text font-semibold hover:text-link-hover;
+  }
+  .title{
+    @apply text-center text-xl font-semibold text-sky-600 font-arial;
+  }
+  .title-more{
+    @apply flex text-lg text-sky-500 items-center;
+  }
+  .nav-link{
+    @apply text-gray-400 font-bold hover:text-sky-500 cursor-pointer;
+  }
+  .slide-button{
+    @apply bg-gray-600 text-white p-2 rounded-full hover:bg-gray-700 active:bg-gray-700;
+  }
+  .section-bgr{
+    @apply bg-section-bgr flex w-full h-full;
+    
+  }
+  .the-first-title{
+    @apply text-section-title mb-2 uppercase;
+  }
 }

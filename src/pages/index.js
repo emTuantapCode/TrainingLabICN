@@ -1,118 +1,70 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-
+import Nav_bar from "@/components/Nav_bar";
+import Slide_show from "@/components/Slide_show";
+import Link from 'next/link';
+import Blog_section from '@/components/Blog_section';
+import Section from '@/components/Section';
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+      className={`flex  flex-col bg-white ${inter.className}`}
     >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <Nav_bar />
+      <Slide_show/>
+      <Link href="/" className="link-default">
+        CHI TIẾT HD
+      </Link>
+      <div className="mt-10 flex flex-col md:flex-row justify-between items-center">
+        <div className="w-full md:w-auto mb-4 md:mb-0"></div>
+        <div className="title md:pl-48 text-center md:text-left">
+          HOẠT ĐỘNG TIÊU BIỂU GẦN ĐÂY
         </div>
+        <Link href="/" className="mt-4 md:mt-0 md:mr-20 title-more flex items-center">
+          Xem thêm
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-blue-500 ml-1">
+            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" />
+          </svg>
+
+        </Link>
+      </div>
+      <Blog_section />
+      <div className="grid place-items-center">
+        <p className="mt-20 title">HOẠT ĐỘNG THEO CHỦ ĐỀ</p>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="flex flex-col md:flex-row items-center justify-between bg-white p-4">
+      <div className="flex items-center space-x-2">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32.0072 15.3175C29.3865 7.68162 20.8096 11.0868 19.9996 14.9048C18.9037 10.8288 10.565 7.78481 7.99198 15.3175C5.13302 23.6757 18.999 31.1568 19.9996 32.3951C21.0002 31.4148 34.8662 23.5209 32.0072 15.3175Z" fill="#D41B48"/>
+        <path d="M35.555 12.5003C35.2217 11.4447 34.6661 10.5003 33.8884 9.7225C33.1661 8.94472 32.2217 8.33361 31.2772 7.94472C30.7772 7.72249 30.2772 7.61138 29.7772 7.50027C29.4995 7.44472 29.2772 7.44472 28.9995 7.38916H28.2217L28.8883 7.72249L29.555 8.05583C29.9995 8.27805 30.4439 8.50027 30.8328 8.77805C31.6661 9.27805 32.3884 9.88916 33.055 10.5558C33.7217 11.2225 34.2217 12.0003 34.7217 12.8892C34.9439 13.3336 35.1661 13.7781 35.3328 14.2225C35.4439 14.4447 35.4995 14.7225 35.6106 14.9447L35.8884 15.6669C35.9439 15.3892 35.9439 15.1114 35.9439 14.8892C35.9439 14.6114 35.9439 14.3336 35.8884 14.1114C35.8328 13.5558 35.7217 13.0003 35.555 12.5003Z" fill="#FFAFAF"/>
+        <path d="M36.6668 11.0002C36.6112 10.6113 36.5557 10.2224 36.4446 9.83355C36.2223 9.05577 35.7779 8.33355 35.2223 7.72244C34.6668 7.11133 34.0001 6.66688 33.2779 6.44466C32.889 6.33355 32.5557 6.22244 32.1668 6.16688C32.0001 6.16688 31.7779 6.11133 31.6112 6.11133C31.4446 6.11133 31.2223 6.11133 31.0557 6.16688C31.2223 6.27799 31.389 6.33355 31.5557 6.44466C31.6668 6.50022 31.8334 6.61133 32.0001 6.66688C32.3334 6.83355 32.6112 7.00022 32.889 7.22244C33.4446 7.61133 34.0001 8.05577 34.4446 8.50022C34.889 9.00022 35.2779 9.55577 35.6668 10.1669C35.8334 10.4447 36.0001 10.778 36.1668 11.1113C36.2223 11.278 36.3334 11.4447 36.389 11.6113C36.4446 11.778 36.5557 11.9447 36.6112 12.1669C36.6668 11.9447 36.6668 11.778 36.6668 11.5558V11.0002Z" fill="#FFAFAF"/>
+        <path d="M4.61024 14.2225C4.77691 13.7781 4.99913 13.2781 5.22135 12.8892C5.6658 12.0003 6.22136 11.2225 6.88802 10.5558C7.55469 9.88916 8.27691 9.27805 9.11025 8.77805C9.49914 8.50027 9.94358 8.27805 10.388 8.05583L11.0547 7.72249L11.7214 7.38916H10.9436C10.6658 7.38916 10.4436 7.44472 10.1658 7.50027C9.6658 7.61138 9.1658 7.72249 8.6658 7.94472C7.72136 8.33361 6.83247 8.94472 6.11024 9.72249C5.38802 10.5003 4.77691 11.4447 4.44358 12.5003C4.27691 13.0003 4.1658 13.5558 4.11024 14.0558C4.05469 14.3336 4.05469 14.6114 4.05469 14.8336C4.05469 15.1114 4.05469 15.3892 4.11024 15.6114L4.38802 14.8892C4.44358 14.6669 4.49913 14.4447 4.61024 14.2225Z" fill="#FFAFAF"/>
+        <path d="M5.55523 8.55566C5.99968 8.05566 6.55523 7.61122 7.11079 7.22233C7.38857 7.05566 7.7219 6.83344 7.99968 6.66678C8.16634 6.55566 8.33301 6.50011 8.49968 6.389C8.66634 6.27789 8.83301 6.22233 8.99968 6.11122C8.83301 6.11122 8.61079 6.05566 8.44412 6.05566C8.27745 6.05566 8.05523 6.05566 7.88857 6.11122C7.49968 6.16678 7.16634 6.27789 6.77745 6.389C5.99968 6.72233 5.33301 7.16678 4.77745 7.72233C4.2219 8.33344 3.77745 9.05567 3.55523 9.83344C3.44412 10.2223 3.38856 10.6112 3.33301 11.0001V11.6112C3.33301 11.8334 3.33301 12.0001 3.38856 12.2223C3.44412 12.0557 3.55523 11.889 3.61079 11.6668C3.7219 11.4446 3.77745 11.2779 3.88856 11.1112C4.05523 10.7779 4.2219 10.4446 4.38856 10.1668C4.7219 9.55567 5.11079 9.00011 5.55523 8.55566Z" fill="#FFAFAF"/>
+        <path d="M6.55556 24.7222L6.5 24.8333C6.77778 25.6666 7.22222 26.3333 7.66667 26.9999C8.11111 27.6666 8.66667 28.2222 9.22222 28.7222C9.77778 29.2222 10.3889 29.7222 11.0556 30.1666C11.7222 30.6111 12.4444 30.9444 13.2778 31.1666L13.3333 31.0555C12.2222 29.9444 11.1111 28.8888 10 27.8333C8.83333 26.8333 7.72222 25.7222 6.55556 24.7222Z" fill="#FFAFAF"/>
+        <path d="M4.22157 26.3892L4.16602 26.5003C4.5549 27.4447 5.0549 28.2225 5.61046 28.9447C6.16602 29.6669 6.77713 30.3336 7.4438 30.9447C8.11046 31.5558 8.77713 32.1114 9.55491 32.6669C10.3327 33.1669 11.1105 33.6669 12.0549 33.9447L12.1105 33.8336C10.8327 32.5558 9.49935 31.3336 8.22157 30.0558C6.88824 28.8336 5.55491 27.5558 4.22157 26.3892Z" fill="#FFAFAF"/>
+        <path d="M30.8328 28.7222C31.3883 28.1666 31.9439 27.6111 32.3883 26.9999C32.8328 26.3888 33.2772 25.6666 33.555 24.8333L33.4995 24.7222C32.3328 25.7222 31.2217 26.8333 30.055 27.8333C28.9439 28.8888 27.8328 29.9444 26.7217 31.0555L26.7772 31.1666C27.6106 30.9444 28.3328 30.5555 28.9995 30.1666C29.6661 29.7222 30.2217 29.2222 30.8328 28.7222Z" fill="#FFAFAF"/>
+        <path d="M31.7776 30.0558C30.4998 31.3336 29.1665 32.5558 27.8887 33.8336L27.9442 33.9447C28.8887 33.6114 29.6664 33.1669 30.4442 32.6669C31.222 32.1669 31.8887 31.6114 32.5553 30.9447C33.222 30.3336 33.8331 29.6669 34.3887 28.9447C34.9442 28.2225 35.4442 27.4447 35.8331 26.5003L35.7776 26.3892C34.4442 27.5558 33.1109 28.8336 31.7776 30.0558Z" fill="#FFAFAF"/>
+        </svg>
+
+        {/* Icon trái */}
+        
+
+        <span className="text-red-600 font-bold text-base md:text-lg">Công ích - Xã hội</span>
       </div>
+      <Link href="/" className="mr-0 md:mr-16 title-more space-x-1 md:text-base">
+          Xem thêm
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-blue-500 ml-1">
+            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" />
+          </svg>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        </Link>
+    </div>
+    <Blog_section />
+    <Section />
+    
     </main>
   );
 }
