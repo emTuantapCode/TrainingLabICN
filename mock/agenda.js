@@ -17,6 +17,9 @@ export const agendaMock = {
     },
     what: {
         title: 'Agenda',
+        icon:(<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-3.5 left-0 -translate-x-1/2 -translate-y-1/2">
+            <path d="M0.571797 4.28867L7 0.57735L13.4282 4.28867V11.7113L7 15.4226L0.571797 11.7113V4.28867Z" stroke="#9CF3FA"/>
+            </svg>),
         items: [
             {   id: '1',
                 title: 'Registration',

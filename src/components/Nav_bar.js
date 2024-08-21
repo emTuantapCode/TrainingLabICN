@@ -12,7 +12,7 @@ export default function Nav_bar() {
 
   return (
   //Hiển thị trên pc
-    <nav className="bg-white py-4 px-6 shadow-md flex">
+    <nav className="bg-white py-4 px-10 shadow-md flex">
       <div className="container mx-auto flex justify-between items-center">
   {/* hình ảnh logo */}
         <Link href="/">

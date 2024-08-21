@@ -35,10 +35,7 @@ export default function Section() {
                   data.what.items.map((item) => (
                       <div key={item.id} className="flex-1 min-w-[200px] px-4 pb-4  relative">
                         <div className=''>
-                          <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-3.5 left-0 -translate-x-1/2 -translate-y-1/2">
-                          <path d="M0.571797 4.28867L7 0.57735L13.4282 4.28867V11.7113L7 15.4226L0.571797 11.7113V4.28867Z" stroke="#9CF3FA"/>
-                          </svg>
-
+                        {data.what.icon}
                         {item.id < 6 && <div className="absolute w-[1px] bg-section-timeline left-0 top-7 bottom-0 -translate-x-1/2"></div>}
                         </div>
                         <h2 className="text-lg font-semibold text-section-text">{item.title}</h2>
